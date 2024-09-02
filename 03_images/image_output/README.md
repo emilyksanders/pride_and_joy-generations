@@ -1,0 +1,1 @@
+This folder will serve as the output location for any image files created within the notebooks.  My own images, meant for inclusion in the report, can be found in the other subfolders of `03_images`.  Please see the table of contents at the bottom of the main [README](../../README.md) for more information.
