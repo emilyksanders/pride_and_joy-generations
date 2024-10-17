@@ -44,259 +44,259 @@ meyer_col_names = {i: i for i in list(meyer.columns)}
 
 # Keyes, part 1: w123_q04-09
 meyer_col_names = {k: 
-  re.sub(r'(w[123])(q[0][4-9])$', r'\1_keyes-\2', k)
+  re.sub(r'(w[123])(q[0][4-9])$', r'\1_keyes-\2', v)
   for k, v in meyer_col_names.items()}
 
 # Keyes, part 2: w123_q10-18
 meyer_col_names = {k: 
-  re.sub(r'(w[123])(q[1][0-8])$', r'\1_keyes-\2', k)
+  re.sub(r'(w[123])(q[1][0-8])$', r'\1_keyes-\2', v)
   for k, v in meyer_col_names.items()}
 
 # composite Keyes
 meyer_col_names = {k: 
-  re.sub(r'(w[123])socialwb', r'\1_keyes_composite', k)
+  re.sub(r'(w[123])socialwb', r'\1_keyes', v)
   for k, v in meyer_col_names.items()}
 
 # Satisfaction with life, part 1: w1_q186-189
 meyer_col_names = {k: 
-  re.sub(r'w1(q[1][8][6-9])', r'w1_life_sat-\1', k)
+  re.sub(r'w1(q[1][8][6-9])', r'w1_life_sat-\1', v)
   for k, v in meyer_col_names.items()}
 
 # Satisfaction with life, part 2: w1_q190
 meyer_col_names = {k: 
-  re.sub(r'w1(q[1][9][0])', r'w1_life_sat-\1', k)
+  re.sub(r'w1(q[1][9][0])', r'w1_life_sat-\1', v)
   for k, v in meyer_col_names.items()}
   
 # composite life sat
 meyer_col_names = {k: 
-  re.sub(r'(w[1])lifesat', r'\1_life_sat', k)
+  re.sub(r'(w[1])lifesat', r'\1_life_sat', v)
   for k, v in meyer_col_names.items()}
 
 # MEIM-R: w1_q21-26
 meyer_col_names = {k: 
-  re.sub(r'w1(q[2][1-6])', r'w1_meim-\1', k)
+  re.sub(r'w1(q[2][1-6])', r'w1_meim-\1', v)
   for k, v in meyer_col_names.items()}
   
 # composite MEIM
 meyer_col_names = {k: 
-  re.sub(r'w1meim', r'w1_meim', k)
+  re.sub(r'w1meim', r'w1_meim', v)
   for k, v in meyer_col_names.items()}
 
 # Gay ID centrality, wave 1: w1_q40-44
 meyer_col_names = {k: 
-  re.sub(r'w1(q[4][0-4])', r'w1_gay_id_cent-\1', k)
+  re.sub(r'w1(q[4][0-4])', r'w1_gay_id_cent-\1', v)
   for k, v in meyer_col_names.items()}
 
 # Gay ID centrality, wave 2 and 3: w2-3_q24-28
 meyer_col_names = {k: 
-  re.sub(r'(w[23])(q[2][4-8])', r'\1_gay_id_cent-\2', k)
+  re.sub(r'(w[23])(q[2][4-8])', r'\1_gay_id_cent-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite Gay ID centrality
 meyer_col_names = {k: 
-  re.sub(r'(w[123])idcentral', r'\1_gay_id_cent', k)
+  re.sub(r'(w[123])idcentral', r'\1_gay_id_cent', v)
   for k, v in meyer_col_names.items()}
 
 # community connectedness, wave 1: w1_q53-59
 meyer_col_names = {k: 
-  re.sub(r'w1(q[5][3-9])', r'w1_comm_conn-\1', k)
+  re.sub(r'w1(q[5][3-9])', r'w1_comm_conn-\1', v)
   for k, v in meyer_col_names.items()}
 
 # community connectedness, wave 2 and 3: w2-3_q30-36
 meyer_col_names = {k: 
-  re.sub(r'(w[23])(q[3][0-6])', r'\1_comm_conn-\2', k)
+  re.sub(r'(w[23])(q[3][0-6])', r'\1_comm_conn-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite community connectedness
 meyer_col_names = {k: 
-  re.sub(r'(w[123])connectedness', r'\1_comm_conn', k)
+  re.sub(r'(w[123])connectedness', r'\1_comm_conn', v)
   for k, v in meyer_col_names.items()}
   
 # health care stereotype threat, w1q60-63
 meyer_col_names = {k: 
-  re.sub(r'w1(q[6][0-3])', r'w1_hc_threat-\1', k)
+  re.sub(r'w1(q[6][0-3])', r'w1_hc_threat-\1', v)
   for k, v in meyer_col_names.items()}
 
 # composite health care stereotype threat
 meyer_col_names = {k: 
-  re.sub(r'w1_hcthreat', r'w1_hc_threat', k)
+  re.sub(r'w1_hcthreat', r'w1_hc_threat', v)
   for k, v in meyer_col_names.items()}
   
 # kessler, wave 1: w1_q77a-77f
 meyer_col_names = {k: 
-  re.sub(r'w1(q[7][7])([a-f])', r'w1_kessler-\2', k)
+  re.sub(r'w1(q[7][7])([a-f])', r'w1_kessler-\2', v)
   for k, v in meyer_col_names.items()}
   
 # kessler, wave 2: w1_q84a-84f
 meyer_col_names = {k: 
-  re.sub(r'w2(q[8][4])([a-f])', r'w2_kessler-\2', k)
+  re.sub(r'w2(q[8][4])([a-f])', r'w2_kessler-\2', v)
   for k, v in meyer_col_names.items()}
 
 # kessler, wave 3: w1_q64a-64f
 meyer_col_names = {k: 
-  re.sub(r'w3(q[6][4])([a-f])', r'w3_kessler-\2', k)
+  re.sub(r'w3(q[6][4])([a-f])', r'w3_kessler-\2', v)
   for k, v in meyer_col_names.items()}
   
 # do another pass to add the a-f text
 # STRAYS FROM THE PATTERN BCZ SECOND PASS!
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][a])', r'w1_kessler_nervous-\2', v)
+  re.sub(r'(w[123])_kessler-([a])', r'\1_kessler_nervous-\2', v)
   for k, v in meyer_col_names.items()}
   
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][b])', r'w1_kessler_hopeless-\2', v)
+  re.sub(r'(w[123])_kessler-([b])', r'\1_kessler_hopeless-\2', v)
   for k, v in meyer_col_names.items()}
   
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][c])', r'w1_kessler_restless_fidgety-\2', v)
+  re.sub(r'(w[123])_kessler-([c])', r'\1_kessler_restless_fidgety-\2', v)
   for k, v in meyer_col_names.items()}
 
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][d])', r'w1_kessler_so_depressed-\2', v)
+  re.sub(r'(w[123])_kessler-([d])', r'\1_kessler_so_depressed-\2', v)
   for k, v in meyer_col_names.items()}
   
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][e])', r'w1_kessler_everything_effort-\2', v)
+  re.sub(r'(w[123])_kessler-([e])', r'\1_kessler_everything_effort-\2', v)
   for k, v in meyer_col_names.items()}
   
 meyer_col_names = {k: 
-  re.sub(r'(w[123])_kessler-(q[6-8][4-7][f])', r'w1_kessler_worthless-\2', v)
+  re.sub(r'(w[123])_kessler-([f])', r'\1_kessler_worthless-\2', v)
   for k, v in meyer_col_names.items()}
 
 # composite kessler
 meyer_col_names = {k: 
-  re.sub(r'(w[123])kessler6', r'\1_kessler', k)
+  re.sub(r'(w[123])kessler6', r'\1_kessler', v)
   for k, v in meyer_col_names.items()}
 
 # alcohol use, wave 1 & 2: w12_q85-87
 meyer_col_names = {k: 
-  re.sub(r'(w[12])(q[8][5-7])', r'\1_alcohol-\2', k)
+  re.sub(r'(w[12])(q[8][5-7])', r'\1_alcohol-\2', v)
   for k, v in meyer_col_names.items()}
   
 # alcohol use, wave 3: w3_q65-67
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[6][5-7])', r'\1_alcohol-\2', k)
+  re.sub(r'(w[3])(q[6][5-7])', r'\1_alcohol-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite alochol use
 meyer_col_names = {k: 
-  re.sub(r'(w[123])auditc', r'\1_alcohol', k)
+  re.sub(r'(w[123])auditc', r'\1_alcohol', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 1, part 1: w1_q90-99
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[9][0-9])', r'\1_drugs-\2', k)
+  re.sub(r'(w[1])(q[9][0-9])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 1, part 2: w1_q100
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[1][0][0])', r'\1_drugs-\2', k)
+  re.sub(r'(w[1])(q[1][0][0])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 2, part 1: w2_q89
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[8][9])', r'\1_drugs-\2', k)
+  re.sub(r'(w[2])(q[8][9])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 2, part 2: w2_q90-99
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[9][0-9])', r'\1_drugs-\2', k)
+  re.sub(r'(w[2])(q[9][0-9])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 3, part 1: w3_q70-79
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[7][0-9])', r'\1_drugs-\2', k)
+  re.sub(r'(w[3])(q[7][0-9])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # drug use, wave 3, part 2: w3_q80
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[8][0])', r'\1_drugs-\2', k)
+  re.sub(r'(w[3])(q[8][0])', r'\1_drugs-\2', v)
   for k, v in meyer_col_names.items()}
 
 # composite drug use
 meyer_col_names = {k: 
-  re.sub(r'(w[1-3])dudit', r'\1_drugs', k)
+  re.sub(r'(w[1-3])dudit', r'\1_drugs', v)
   for k, v in meyer_col_names.items()}
   
 # felt stigma, wave 1: w1_q125-127
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[1][2][5-7])', r'\1_stigma-\2', k)
+  re.sub(r'(w[1])(q[1][2][5-7])', r'\1_stigma-\2', v)
   for k, v in meyer_col_names.items()}
   
 # felt stigma, wave 2, part 1: w2_q108-109
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][0][8-9])', r'\1_stigma-\2', k)
+  re.sub(r'(w[2])(q[1][0][8-9])', r'\1_stigma-\2', v)
   for k, v in meyer_col_names.items()}
 
 # felt stigma, wave 2, part 2: w2_q110
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][1][0])', r'\1_stigma-\2', k)
+  re.sub(r'(w[2])(q[1][1][0])', r'\1_stigma-\2', v)
   for k, v in meyer_col_names.items()}
   
 # felt stigma, wave 3: w3_q90-92
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[9][0-2])', r'\1_stigma-\2', k)
+  re.sub(r'(w[3])(q[9][0-2])', r'\1_stigma-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite felt stigma
 meyer_col_names = {k: 
-  re.sub(r'(w[1-3])feltstigma', r'\1_stigma', k)
+  re.sub(r'(w[1-3])feltstigma', r'\1_stigma', v)
   for k, v in meyer_col_names.items()}
   
 # internalized homophobia, wave 1, part 1: w1_q128-129
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[1][2][8-9])', r'\1_int_homo-\2', k)
+  re.sub(r'(w[1])(q[1][2][8-9])', r'\1_int_homo-\2', v)
   for k, v in meyer_col_names.items()}
   
 # internalized homophobia, wave 1, part 1: w1_q130-132
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[1][3][0-2])', r'\1_int_homo-\2', k)
+  re.sub(r'(w[1])(q[1][3][0-2])', r'\1_int_homo-\2', v)
   for k, v in meyer_col_names.items()}
 
 # internalized homophobia, wave 2: w2_q111-115
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][1][1-5])', r'\1_int_homo-\2', k)
+  re.sub(r'(w[2])(q[1][1][1-5])', r'\1_int_homo-\2', v)
   for k, v in meyer_col_names.items()}
   
 # internalized homophobia, wave 3: w1_q93-97
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[9][3-7])', r'\1_int_homo-\2', k)
+  re.sub(r'(w[3])(q[9][3-7])', r'\1_int_homo-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite internalized homophobia
 meyer_col_names = {k: 
-  re.sub(r'(w[123])internalized', r'\1_int_homo', k)
+  re.sub(r'(w[123])internalized', r'\1_int_homo', v)
   for k, v in meyer_col_names.items()}
   
 # bi stigma, wave 2 (only), part 1: w2_q117-119
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][1][7-9])', r'\1_bi_stigma-\2', k)
+  re.sub(r'(w[2])(q[1][1][7-9])', r'\1_bi_stigma-\2', v)
   for k, v in meyer_col_names.items()}
 
 # bi stigma, wave 2 (only), part 2: w2_q120-121
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][2][0-1])', r'\1_bi_stigma-\2', k)
+  re.sub(r'(w[2])(q[1][2][0-1])', r'\1_bi_stigma-\2', v)
   for k, v in meyer_col_names.items()}
   
 # composite bi stigma
 meyer_col_names = {k: 
-  re.sub(r'(w[2])bistigma', r'\1_bostwick_bi_stigma', k)
+  re.sub(r'(w[2])bistigma', r'\1_bostwick_bi_stigma', v)
   for k, v in meyer_col_names.items()}
 
 # change them all to disc-q#a-i  
 # everyday discrimination, wave 1: w1_q144A-I
 meyer_col_names = {k: 
-  re.sub(r'(w[1])(q[1][4][4][a-i])', r'\1_disc-\2', k)
+  re.sub(r'(w[1])(q[1][4][4][a-i])', r'\1_disc-\2', v)
   for k, v in meyer_col_names.items()}
 
 # everyday discrimination, wave 2: w2_q131A-I  
 meyer_col_names = {k: 
-  re.sub(r'(w[2])(q[1][3][1][a-i])', r'\1_disc-\2', k)
+  re.sub(r'(w[2])(q[1][3][1][a-i])', r'\1_disc-\2', v)
   for k, v in meyer_col_names.items()}
   
 # everyday discrimination, wave 3: w3_q126A-I  
 meyer_col_names = {k: 
-  re.sub(r'(w[3])(q[1][2][6][a-i])', r'\1_disc-\2', k)
+  re.sub(r'(w[3])(q[1][2][6][a-i])', r'\1_disc-\2', v)
   for k, v in meyer_col_names.items()}
 
 # change all disc-___a, b, c, etc. to their values
@@ -340,7 +340,190 @@ meyer_col_names = {k:
   
 # composite everyday discrimination
 meyer_col_names = {k: 
-  re.sub(r'(w[123])everyday', r'\1_disc', k)
+  re.sub(r'(w[123])everyday', r'\1_disc', v)
+  for k, v in meyer_col_names.items()}
+  
+# chronic strains, wave 1: w1q146A-w1q146L
+# a = taking on too much
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][a])', r'\1_chronic_strain_taking_on_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# b = don't have enough money to make ends meet
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][b])', r'\1_chronic_strain_money_not_ends_meet-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# c = job often leaves you physically and emotionally tired
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][c])', r'\1_chronic_strain_job_phys_emo_tired-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# d = looking for a job and can't find one you want
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][d])', r'\1_chronic_strain_cant_find_job_want-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# e = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][e])', r'\1_chronic_strain_conflict_with_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# f = parents don't approve of your partner
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][f])', r'\1_chronic_strain_parents_dont_approve_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# g = alone too much
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][g])', r'\1_chronic_strain_alone_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# h = you wonder if you will ever find a partner or spouse
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][h])', r'\1_chronic_strain_wonder_ever_marry-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# i = relationship with parents is strained or conflicted
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][i])', r'\1_chronic_strain_conflict_with_parents-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# j = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][j])', r'\1_chronic_strain_loved_one_bad_phys_emo_health-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# k = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][k])', r'\1_chronic_strain_want_kids_but_cant-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# l = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_disc-(q[1][4][6][l])', r'\1_chronic_strain_concerned_childs_behav_mood-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# chronic strains, wave 2: w2q133A-w1q133L
+# a = taking on too much
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][a])', r'\1_chronic_strain_taking_on_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# b = don't have enough money to make ends meet
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][b])', r'\1_chronic_strain_money_not_ends_meet-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# c = job often leaves you physically and emotionally tired
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][c])', r'\1_chronic_strain_job_phys_emo_tired-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# d = looking for a job and can't find one you want
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][d])', r'\1_chronic_strain_cant_find_job_want-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# e = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][e])', r'\1_chronic_strain_conflict_with_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# f = parents don't approve of your partner
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][f])', r'\1_chronic_strain_parents_dont_approve_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# g = alone too much
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][g])', r'\1_chronic_strain_alone_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# h = you wonder if you will ever find a partner or spouse
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][h])', r'\1_chronic_strain_wonder_ever_marry-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# i = relationship with parents is strained or conflicted
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][i])', r'\1_chronic_strain_conflict_with_parents-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# j = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][j])', r'\1_chronic_strain_loved_one_bad_phys_emo_health-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# k = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][k])', r'\1_chronic_strain_want_kids_but_cant-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# l = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[2])_disc-(q[1][3][3][l])', r'\1_chronic_strain_concerned_childs_behav_mood-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# chronic strains, wave 2: w2q128A-w1q128L
+# a = taking on too much
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][a])', r'\1_chronic_strain_taking_on_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# b = don't have enough money to make ends meet
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][b])', r'\1_chronic_strain_money_not_ends_meet-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# c = job often leaves you physically and emotionally tired
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][c])', r'\1_chronic_strain_job_phys_emo_tired-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# d = looking for a job and can't find one you want
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][d])', r'\1_chronic_strain_cant_find_job_want-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# e = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][e])', r'\1_chronic_strain_conflict_with_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# f = parents don't approve of your partner
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][f])', r'\1_chronic_strain_parents_dont_approve_partner-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# g = alone too much
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][g])', r'\1_chronic_strain_alone_too_much-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# h = you wonder if you will ever find a partner or spouse
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][h])', r'\1_chronic_strain_wonder_ever_marry-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# i = relationship with parents is strained or conflicted
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][i])', r'\1_chronic_strain_conflict_with_parents-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# j = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][j])', r'\1_chronic_strain_loved_one_bad_phys_emo_health-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# k = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][k])', r'\1_chronic_strain_want_kids_but_cant-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# l = You have a lot of conflict with your partner/boyfriend/girlfriend.
+meyer_col_names = {k: 
+  re.sub(r'(w[3])_disc-(q[1][2][8][l])', r'\1_chronic_strain_concerned_childs_behav_mood-\2', v)
   for k, v in meyer_col_names.items()}
 
 # THIS is the pdf that I'm working through with the variable names:
@@ -355,7 +538,7 @@ print(json.dumps(meyer_col_names, indent = 2))
   
 
 # Display the n per wave; note that 3 = waves 1 and 2, but not wave 3, & 4 = all 3 waves
-meyer['waveparticipated'].value_counts(dropna = False).sort_index()
+# meyer['waveparticipated'].value_counts(dropna = False).sort_index()
 
 
 
