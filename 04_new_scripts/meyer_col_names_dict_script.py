@@ -525,10 +525,195 @@ meyer_col_names = {k:
 meyer_col_names = {k: 
   re.sub(r'(w[3])_disc-(q[1][2][8][l])', r'\1_chronic_strain_concerned_childs_behav_mood-\2', v)
   for k, v in meyer_col_names.items()}
+  
+
+# childhood gender conformity
+
+# childhood gender conformity, wave 1 (only), part 1: w1_q147-149
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][4][7-9])', r'\1_child_gnc-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# childhood gender conformity, wave 1 (only), part 1: w1_q150
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][5][0])', r'\1_child_gnc-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# composite childhood gender conformity
+meyer_col_names = {k: 
+  re.sub(r'(w[1])childgnc', r'\1_child_gnc', v)
+  for k, v in meyer_col_names.items()}
+  
+
+# adverse childhood experiences (ace)
+
+# ace, wave 1 (only), part 1: w1_q151-159
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][5][1-9])', r'\1_ace_raw-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# ace, wave 1 (only), part 2: w1_q160-161
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][6][0-1])', r'\1_ace_raw-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# composite ace, subscales and total (1st pass)
+meyer_col_names = {k: 
+  re.sub(r'(w[1])ace', r'\1_ace', v)
+  for k, v in meyer_col_names.items()}
+
+# 2nd pass -- should catch raw and _i
+# emotional abuse
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_emo', r'\1_ace_emo_abuse', v)
+  for k, v in meyer_col_names.items()}
+  
+# physical abuse
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_phy', r'\1_ace_phys_abuse', v)
+  for k, v in meyer_col_names.items()}
+
+# sexual abuse
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_sex', r'\1_ace_sex_abuse', v)
+  for k, v in meyer_col_names.items()}
+  
+# ipv -- fine as is
+
+# substance use
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_sub', r'\1_ace_sub_use', v)
+  for k, v in meyer_col_names.items()}
+
+# mental illness
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_men', r'\1_ace_ment_ill', v)
+  for k, v in meyer_col_names.items()}
+
+# parental separation or divorce
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_sep', r'\1_ace_parent_sep', v)
+  for k, v in meyer_col_names.items()}
+  
+# incarcerated household member
+meyer_col_names = {k: 
+  re.sub(r'(w[1])_ace_inc', r'\1_ace_fam_jail', v)
+  for k, v in meyer_col_names.items()}
+
+
+# social support, pass 1, wave 1: w1q164a-l
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][6][4][a-l])', r'\1_soc_supp-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# social support, pass 1, wave 2: w2q135a-l
+meyer_col_names = {k: 
+  re.sub(r'(w[2])(q[1][3][5][a-l])', r'\1_soc_supp-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# social support, pass 1, wave 3: w3q129a-l
+meyer_col_names = {k: 
+  re.sub(r'(w[3])(q[1][2][9][a-l])', r'\1_soc_supp-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# social support, pass 2: a-l
+# a = There is a special person who is around when I am in need.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][a])', r'\1_soc_supp_special_person_im_in_need-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# b = There is a special person with whom I can share my joys and sorrows.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][b])', r'\1_soc_supp_special_person_share_feelings-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# c = My family really tries to help me.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][c])', r'\1_soc_supp_special_fam_tries_help-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# d = I get the emotional help and support I need from my family.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][d])', r'\1_soc_supp_get_emo_supp_fam-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# e = I have a special person who is a real source of comfort to me.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][e])', r'\1_soc_supp_special_person_comfort-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# f = My friends really try to help me.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][f])', r'\1_soc_supp_friends_try_help-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# g = I can count on my friends when things go wrong.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][g])', r'\1_soc_supp_count_on_friends-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# h = I can talk about my problems with my family.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][h])', r'\1_soc_supp_fam_talk_problems-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# i = I have friends with whom I can share my joys and sorrows.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][i])', r'\1_soc_supp_friends_share_feelings-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# j = There is a special person in my life who cares about my feelings.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][j])', r'\1_soc_supp_special_person_cares_feelings-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# k = My family is willing to help me make decisions.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][k])', r'\1_soc_supp_fam_help_decisions-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# l = I can talk about my problems with my friends.
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp-(q[1][236][459][l])', r'\1_soc_supp_friends_talk_problems-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# composite social support, 1st pass
+meyer_col_names = {k: 
+  re.sub(r'(w[123])socsupport', r'\1_soc_supp', v)
+  for k, v in meyer_col_names.items()}
+  
+# composite social support, 2nd pass
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp_fr$', r'\1_soc_supp_from_friends', v)
+  for k, v in meyer_col_names.items()}
+
+# list the i separately because I have to anchor fr$ 
+# if I don't anchor it, it catches on all the 'friends' ones
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp_fr_i$', r'\1_soc_supp_from_friends_i', v)
+  for k, v in meyer_col_names.items()}
+  
+# same for fam
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp_fam$', r'\1_soc_supp_from_fam', v)
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp_fam_i$', r'\1_soc_supp_from_fam_i', v)
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'(w[123])_soc_supp_so', r'\1_soc_supp_from_sig_other', v)
+  for k, v in meyer_col_names.items()}
+
+
+
+
 
 # THIS is the pdf that I'm working through with the variable names:
 # file:///C:/Users/emily/Git_Stuff/General_Assembly/04_Projects/project-capstone/potential_datasets/2024_05_23_download_ICPSR_Meyer_2023_generations_data_attempt_2/ICPSR_37166/37166-Documentation-methodology.pdf
 # and look at the documentation crosswalk (in original folder) to cross ref between waves
+# October 30th: I'm up to "social support matrix questions," page 31/88
 
 
 
