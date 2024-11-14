@@ -40,7 +40,9 @@ meyer_col_names = {i: i for i in list(meyer.columns)}
 
 # make broad fixes
 # backreferencing! : https://stackoverflow.com/questions/14458160/while-replacing-using-regex-how-to-keep-a-part-of-matched-string
-# meyer_col_names = {k: re.sub(r'w([123])', r'w\1_', k) for k, v in meyer_col_names.items()}
+
+
+# Renaming variables from the "scale creation" section
 
 # Keyes, part 1: w123_q04-09
 meyer_col_names = {k: 
@@ -706,14 +708,142 @@ meyer_col_names = {k:
   re.sub(r'(w[123])_soc_supp_so', r'\1_soc_supp_from_sig_other', v)
   for k, v in meyer_col_names.items()}
 
+# social support matrix Qs, wave 2 (only), part 1: w2q156-159  
+meyer_col_names = {k: 
+  re.sub(r'(w[2])(q[1][5][6-9])', r'\1_soc_supp_matr-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# social support matrix Qs, wave 2 (only), part 2: w2q160-161  
+meyer_col_names = {k: 
+  re.sub(r'(w[2])(q[1][6][0-1])', r'\1_soc_supp_matr-\2', v)
+  for k, v in meyer_col_names.items()}
 
 
+# Renaming variables from the "new variable creation" section
 
+# birth year
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q[1][6][5])', r'\1_birth_year-\2', v)
+  for k, v in meyer_col_names.items()}
+
+# age
+meyer_col_names = {k: 
+  re.sub(r'(w[123])(age)$', r'\1_\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+# cohort fine as is
+
+# race
+meyer_col_names = {k: 
+  re.sub(r'screen_race', r'simple_race', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(race)$', r'\1_specific_\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+# specific racial identities, wave 1 (only), part 1, w1q20_1-7-t, 1st pass
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q20_[1-7])', r'\1_race-\2', v)
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q20_t_verb)', r'\1_race_write_in-\2', v)
+  for k, v in meyer_col_names.items()}
+  
+# pass 2
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[1])', r'\1_asian\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[2])', r'\1_black\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[3])', r'\1_latine\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[4])', r'\1_mid_east_nor_afr\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[5])', r'\1_pacific\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[6])', r'\1_white\2', v)
+  for k, v in meyer_col_names.items()} 
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1]_race)(-q20_[7])', r'\1_native\2', v)
+  for k, v in meyer_col_names.items()} 
+
+# sex assigned at birth
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(sex)$', r'\1_\2_aab', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q27)$', r'\1_sex_aab-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+# gender
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(gender)$', r'\1_\2_i', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q28)$', r'\1_gender-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+# sex and gender
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(sex_gender)$', r'\1_\2_i', v) 
+  for k, v in meyer_col_names.items()}
+
+# sexual identity
+meyer_col_names = {k: 
+  re.sub(r'(w[123])(sexualid)$', r'\1_\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q29)$', r'\1_survey_sexualid-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[23])(q21)$', r'\1_survey_sexualid-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1])(q29_t_verb)$', r'\1_survey_sexualid_write_in-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[23])(q21_t_verb)$', r'\1_survey_sexualid_write_in-\2', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[123])(sexminid)$', r'\1_sex_min_cat', v) 
+  for k, v in meyer_col_names.items()}
 
 # THIS is the pdf that I'm working through with the variable names:
 # file:///C:/Users/emily/Git_Stuff/General_Assembly/04_Projects/project-capstone/potential_datasets/2024_05_23_download_ICPSR_Meyer_2023_generations_data_attempt_2/ICPSR_37166/37166-Documentation-methodology.pdf
 # and look at the documentation crosswalk (in original folder) to cross ref between waves
 # October 30th: I'm up to "social support matrix questions," page 31/88
+# November 13: "education", page 19/88
+
+# get the rest of the w[123]_
+# meyer_col_names = {k: 
+#   re.sub(r'w([123])([^_])', r'w\1_\2', 'w1_ace') 
+#   for k, v in meyer_col_names.items()}
+
+
+
+
+
+
 
 
 
