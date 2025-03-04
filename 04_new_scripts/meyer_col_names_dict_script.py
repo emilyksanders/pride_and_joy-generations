@@ -828,11 +828,84 @@ meyer_col_names = {k:
   re.sub(r'(w[123])(sexminid)$', r'\1_sex_min_cat', v) 
   for k, v in meyer_col_names.items()}
 
+# education
+meyer_col_names = {k: 
+  re.sub(r'geducation', r'education', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'geduc1', r'education_consolidated', v) 
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'geduc1', r'education_binary_more_than_high_school', v) 
+  for k, v in meyer_col_names.items()}
+  
+# Gallop poll data for RUCA (Rural-Urban Commuting Area coding system)
+meyer_col_names = {k: 
+  re.sub(r'gruca', r'rural_urban_score', v) 
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'gurban', r'rural_urban_binary', v) 
+  for k, v in meyer_col_names.items()}
+  
+# location
+meyer_col_names = {k: 
+  re.sub(r'gcendiv', r'census_division', v) 
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'gcenreg', r'census_region', v) 
+  for k, v in meyer_col_names.items()}
+
+# distance from LGBT community health center
+meyer_col_names = {k: 
+  re.sub(r'gmilesaway$', r'miles_to_lgbt_heatlh_center', v) 
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'gmilesaway2', r'miles_to_lgbt_heatlh_center_binary', v) 
+  for k, v in meyer_col_names.items()}
+
+
+# poverty
+meyer_col_names = {k: 
+  re.sub(r'(w[1-3])hinc', r'\1_household_income', v)
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'(w[1-3])poverty$', r'\1_below_poverty_line', v)
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1-3])poverty_i$', r'\1_below_poverty_line_i', v)
+  for k, v in meyer_col_names.items()}
+  
+meyer_col_names = {k: 
+  re.sub(r'(w[1-3])povertycat', r'\1_poverty_bracket', v)
+  for k, v in meyer_col_names.items()}
+
+meyer_col_names = {k: 
+  re.sub(r'(w[1-3])(sex_gender)$', r'\1_\2_i', v) 
+  for k, v in meyer_col_names.items()}
+
+
+
+# these are fully redacted by icpsr, so they're useless
+drop_list = [
+  'gzipstate', 'gzipcode']
+
 # THIS is the pdf that I'm working through with the variable names:
 # file:///C:/Users/emily/Git_Stuff/General_Assembly/04_Projects/project-capstone/potential_datasets/2024_05_23_download_ICPSR_Meyer_2023_generations_data_attempt_2/ICPSR_37166/37166-Documentation-methodology.pdf
 # and look at the documentation crosswalk (in original folder) to cross ref between waves
 # October 30th: I'm up to "social support matrix questions," page 31/88
 # November 13: "education", page 19/88
+# March 3: "Sexual orientation change therapy.", page 21/88
+
+
+
+# scraps
 
 # get the rest of the w[123]_
 # meyer_col_names = {k: 
